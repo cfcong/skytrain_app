@@ -1,0 +1,6 @@
+<h1>Stations#index</h1>
+<hr>
+<% @stations.each do |station| %>
+  <%= link_to station.name, trainline_path(station) %>
+  <hr>
+<% end %>

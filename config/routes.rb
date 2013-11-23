@@ -1,5 +1,6 @@
 SkytrainApp::Application.routes.draw do
   
+  resources :stations
   resources :trainlines
   root to: 'trainlines#index'
   # The priority is based upon order of creation: first created -> highest priority.
