@@ -1,0 +1,5 @@
+<h1>Trainlines#show</h1>
+<%= link_to "Back to all Trainlines", trainlines_path %><br/>
+<% @trainlines.each do |trainline| %>
+  <%= link_to trainline.name, trainline_path(trainline) %>
+  <hr>
