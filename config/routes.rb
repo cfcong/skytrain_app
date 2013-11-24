@@ -1,5 +1,8 @@
 SkytrainApp::Application.routes.draw do
   
+  get "restaurants/index"
+  get "shops/index"
+  get "attraction/index"
   resources :stations
   resources :trainlines
   root to: 'trainlines#index'
