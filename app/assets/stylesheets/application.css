@@ -11,3 +11,9 @@
  *= require_self
  *= require_tree .
  */
+body{
+ 
+  background-image:url('http://s15.postimg.org/43jh0uenf/skytrain_bridge_night2.jpg');
+  background-repeat:no-repeat;
+  background-position: center;
+}
