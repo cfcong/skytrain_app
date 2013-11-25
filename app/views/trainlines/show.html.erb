@@ -2,6 +2,6 @@
 <%= link_to "Back to all Trainlines", trainlines_path %><br/>
 <hr>
 <% @trainline.stations.each do |station| %>
-  <%= link_to station.name, station_path %>
+  <%= link_to station.name, station_path(params[:id]) %>
 <br> 
 <% end %>

@@ -19,6 +19,9 @@ Station.create(name:'22nd Street')
 Station.create(name:'New Westminister')
 Station.create(name:'Columbia')
 
+Attraction.create(name: 'Sinclair Centre', latitude: '49.285868', longitude: '-123.113868', description: 'It is upscale downtown shopping centre.')
+Attraction.create(name: 'Harbour Centre', latitude: '49.2846', longitude: '-123.1123', description: 'It is an observation tower.')
+Attraction.create(name: 'Canada Place', latitude: '49.288635', longitude: '-123.111119', description: 'It is a docking terminal for cruises to international ports as well as home to convention centres.')
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
