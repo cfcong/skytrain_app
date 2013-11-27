@@ -32,10 +32,22 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'table_print'
+group :development do
+  gem 'table_print'
+  gem 'quiet_assets'
+end 
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'pry-debugger'
+  gem 'factory_girl_rails'
+  gem 'simplecov', :require => false
+end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
+
+gem 'pry'
 
 # Use unicorn as the app server
 # gem 'unicorn'
