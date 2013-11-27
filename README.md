@@ -17,9 +17,9 @@ Run the following commands:
 1. Type in your url in your browser: 'localhost:XXXX'
 > Note: Replace XXXX with which ever 4 digit port you use.
 
-# User Stories
+## User Stories
 
-### Consumer
+#### Consumer
 - As a user, I can view a list of SkyTrain stations in the system
 - As a user, I can select a SkyTrain station for more details
 - As a user, I can view main retailer& servers nearby.
