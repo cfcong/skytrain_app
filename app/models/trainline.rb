@@ -6,4 +6,14 @@ class Trainline < ActiveRecord::Base
   validates :name,
     presence: true
 
+  # def superAwesomeHappyFunTimes a 
+  #   if (a == 2)
+  #     "blah"
+  #   elsif (a == 1)
+  #     "YAY!!!!!"
+  #   else
+  #     "wow that's another number"
+  #   end
+  # end
+
 end
