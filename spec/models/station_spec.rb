@@ -13,7 +13,7 @@ describe Station do
       @station1.sequence_num = 5
       @station1.save
 
-      expect(@station.get_the_next_station.id).to eq(station1.id)  
+      expect(@station.get_the_next_station.id).to eq(@station1.id)  
     end
   end
 end   
