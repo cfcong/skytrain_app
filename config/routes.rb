@@ -1,9 +1,9 @@
 SkytrainApp::Application.routes.draw do
   
-  get "restaurants/index"
-  get "shops/index"
-  get "attraction/index"
-  resources :stations
+  resources :restaurants
+  resources :shops
+  resources :attractions
+  resources :stations 
   resources :trainlines
   root to: 'trainlines#index'
   # The priority is based upon order of creation: first created -> highest priority.
