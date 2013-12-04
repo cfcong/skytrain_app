@@ -6,8 +6,8 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:email])
 
-    if user && user.autheticate(params[:password])
-      sessions[:user_id] = user.user_id
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
       redirect_to trainlines_path, notice: "Welcome back, #{user.firstname}"
     else
       flash.now[:alert] = "Log in failed. Please try again"
@@ -16,8 +16,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    sessions[:user_id] = nil
-    redirect_to trainlines_path, notice "See you again."
+    session[:user_id] = nil
+    redirect_to trainlines_path, notice: "See you again."
   end
 
 end

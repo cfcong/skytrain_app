@@ -3,10 +3,12 @@ require 'spec_helper'
 describe StationsController do
 
   describe "GET #index" do
-    it "responds successfully with an HTTP 200 status code" do 
+    it "list all stations" do 
+      station = FactoryGirl.create(:station)
       get :index
-      expect(response).to be_success
-      expect(response.status).to eq(200)
+      stations = assigns(:stations)
+      expect(stations).to eq(station)
+      expect(response). to render_template("index")
     end
 
     it "renders the index template" do

@@ -1,13 +1,12 @@
 SkytrainApp::Application.routes.draw do
   
-  
   resources :restaurants
   resources :shops 
   resources :attractions 
   resources :stations, only: [:index, :show]
   resources :trainlines, only: [:index, :show]
-  resources :sessions, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
+  resources :sessions, only: [:new, :create, :destroy]
   root to: 'trainlines#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

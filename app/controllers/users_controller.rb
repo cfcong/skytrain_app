@@ -7,12 +7,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    if user.save
+    if @user.save
       session[:user_id] = @user.id
-      redirect_to trainlines_path, notice: "Welcome #{@user.firstname} #{@user.lastname}"
+      redirect_to trainlines_path, notice: "Welcome #{@user.firstname}"
     else
       render :new
-  end
+    end
+  end  
 
   protected
 

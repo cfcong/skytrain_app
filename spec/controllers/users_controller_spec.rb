@@ -10,9 +10,9 @@ describe UsersController do
   end
 
   describe "GET 'create'" do
-    it "returns http success" do
-      get 'create'
-      expect(response).to be_success
+    it "returns user created" do
+      user = FactoryGirl.create(:user)
+      users = assigns(:users)
     end
   end
 
