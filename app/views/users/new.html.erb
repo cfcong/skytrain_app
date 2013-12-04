@@ -1,4 +1,6 @@
 <h1>Sign Up</h1>
+<%= link_to "Back to Trainlines", trainlines_path %>
+<hr>
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div>
