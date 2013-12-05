@@ -49,6 +49,8 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'pry'
 
+gem 'zeus'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
