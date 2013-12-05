@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131130225435) do
+ActiveRecord::Schema.define(version: 20131205010157) do
 
   create_table "attractions", force: true do |t|
     t.float    "latitude"
@@ -70,6 +70,10 @@ ActiveRecord::Schema.define(version: 20131130225435) do
     t.string   "lastname"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "card_info"
+    t.string   "name_on_card"
+    t.integer  "expiration_month"
+    t.integer  "expiration_year"
   end
 
 end
