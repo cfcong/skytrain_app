@@ -3,8 +3,8 @@ require 'spec_helper'
 describe StationsController do
 
   describe "GET #index" do
-    it "list all stations" do 
-      station = FactoryGirl.create(:station)
+    pending it "list all stations" do 
+      station = FactoryGirl.create :station
       get :index
       stations = assigns(:stations)
       expect(stations).to eq(station)
