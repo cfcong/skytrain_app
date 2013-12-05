@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131205010157) do
+ActiveRecord::Schema.define(version: 20131205041250) do
 
   create_table "attractions", force: true do |t|
     t.float    "latitude"
     t.float    "longitude"
     t.string   "name"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payments", force: true do |t|
+    t.integer  "subscription_id"
+    t.integer  "amount"
+    t.datetime "paid_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -57,6 +65,14 @@ ActiveRecord::Schema.define(version: 20131205010157) do
     t.integer  "sequence_num"
   end
 
+  create_table "subscriptions", force: true do |t|
+    t.integer  "user_id"
+    t.date     "start_date"
+    t.date     "last_payment_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "trainlines", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -74,6 +90,7 @@ ActiveRecord::Schema.define(version: 20131205010157) do
     t.string   "name_on_card"
     t.integer  "expiration_month"
     t.integer  "expiration_year"
+    t.boolean  "subscribed"
   end
 
 end
