@@ -11,4 +11,8 @@ class Subscription < ActiveRecord::Base
 
   validates :next_payment_date,
     presence: true
+
+  validates :last_payment_date,
+    presence: true
+    
 end
