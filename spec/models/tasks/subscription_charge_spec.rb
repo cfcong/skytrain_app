@@ -16,7 +16,9 @@ describe Tasks::SubscriptionCharge do
         # with_params (amount: PLAN_AMOUNT, currency: "cad", customer: @subscription.user.card_info)
         # esc.charge!
       end
-
+    
+    end
+  
   end 
 
 end

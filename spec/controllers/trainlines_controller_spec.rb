@@ -16,7 +16,7 @@ describe TrainlinesController do
   end
 
   describe "GET 'show'" do 
-    pending it "renders the show template" do
+    it "renders the show template" do
       trainline = FactoryGirl.create(:trainline)
       get :show, id: trainline.id
       expect(response).to render_template("show")
