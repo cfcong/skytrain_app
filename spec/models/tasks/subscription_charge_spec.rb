@@ -4,21 +4,16 @@ describe Tasks::SubscriptionCharge do
   
   before :each do
     @subscription = FactoryGirl.create :subscription
-    @sc = sc.new(@subscription)
+    @SubscriptionCharge = Tasks::SubscriptionCharge.new(@subscription)
+    @subscription.user.card_info = "cus_34OpRm4ESZvdHi"
+    PLAN_AMOUNT = 500
   end
-  
-  describe SC do
 
-    describe "#charge!" do
-
-      it "should attempt to charge through Stripe" do
-        expect(Stripe::Charge.new).to recieve(:new).once
-        # with_params (amount: PLAN_AMOUNT, currency: "cad", customer: @subscription.user.card_info)
-        # esc.charge!
-      end
-    
+  describe "#charge!" do
+    it "should attempt to charge through Stripe" do
+      expect(Stripe::Charge).to receive(:create).with(amount: PLAN_AMOUNT, currency: "cad", customer: @subscription.user.card_info)
+      @SubscriptionCharge.charge!
     end
-  
   end 
 
 end
