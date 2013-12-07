@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :subscription do
-    user_id 1
+    association :user, :factory=>:user
     start_date "2013-12-05"
     last_payment_date "2013-12-05"
     next_payment_date "2013-01-05"
