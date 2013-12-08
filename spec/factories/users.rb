@@ -7,8 +7,11 @@ FactoryGirl.define do
     password_confirmation "MyString"
     firstname "Colin"
     lastname "Ferrel"
-    card_info "blahblah"
     expiration_month "12"
     expiration_year "2015"
+
+    factory :subscribed_user do
+      card_info "blahblah"
+    end
   end
 end
